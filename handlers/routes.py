@@ -1,51 +1,42 @@
-import os
-import pandas as pd
-from flask import render_template, request, json
-from modules.woo_requests.product_details_by_name import product_details_by_name
-from modules.woo_requests.products_from_category import get_products_from_category
-from modules.woo_requests.woo_req_base import ReqType, woo_req_base
+from flask import Flask, jsonify, request
+from pymongo import MongoClient
+from bson.objectid import ObjectId
 
 
 def configure_routes(app):
+    mongo_uri = 'mongodb://localhost:27017/'
+    client = MongoClient(mongo_uri)
+    db = client['mydatabase']
 
-    @app.route("/")
+    # Routes
+    @app.route('/')
     def index():
-        return render_template("index.html")
+        return jsonify(message="Welcome to the Flask MongoDB app!")
 
-    @app.route('/success', methods=['POST', 'GET'])
-    def success():
+    # Create
+    @app.route('/post', methods=['POST'])
+    def add_item():
+        item = request.json
+        db.mycollection.insert_one(item)  # Replace 'mycollection' with your collection name
+        return jsonify(message="Item added successfully!"), 201
 
-        if request.method == 'POST':
-            data = request.get_json()
-            main_field = data['main_field']
-            selectedRadioValue = data['selectedRadioValue']
-            web_field = data['web_field']
-            ck_field = data['ck_field']
-            cs_field = data['cs_field']
+    # Read
+    @app.route('/get', methods=['GET'])
+    def get_items():
+        items = list(db.mycollection.find())  # Replace 'mycollection' with your collection name
+        for item in items:
+            item["_id"] = str(item["_id"])
+        return jsonify(items)
 
-            # 0 = One product, not category
-            if selectedRadioValue == 0:
-                product_details_by_name(web_field, cs_field, ck_field, main_field)
-            else:
-                get_products_from_category(web_field, cs_field, ck_field, main_field, selectedRadioValue)
+    # Update
+    @app.route('/update/<id>', methods=['PUT'])
+    def update_item(id):
+        db.mycollection.update_one({"_id": ObjectId(id)}, {"$set": request.json})  # Replace 'mycollection'
+        return jsonify(message="Item updated successfully!")
 
-        return render_template('success.html')
+    # Delete
+    @app.route('/delete/<id>', methods=['DELETE'])
+    def delete_item(id):
+        db.mycollection.delete_one({"_id": ObjectId(id)})  # Replace 'mycollection'
+        return jsonify(message="Item deleted successfully!")
 
-    @app.route('/get_category', methods=['POST', 'GET'], )
-    def get_category():
-        if request.method == 'POST':
-            print("START /get_category")
-            print(request.get_json())
-            data = request.get_json()
-    
-            resp = woo_req_base(
-                    path='/wp-json/wc/v3/products/categories?per_page=100&_fields=id,name',
-                    reqType=ReqType.GET,
-                    params={},
-
-                    base_url=data['web_field'],
-                    consumer_secret=data['cs_field'],
-                    consumer_key=data['ck_field'],
-                )
-            
-            return resp
