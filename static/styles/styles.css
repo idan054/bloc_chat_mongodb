@@ -1,0 +1,87 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+form {
+    margin-top: 30px;
+}
+
+h2 {
+    color: #007bff;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+
+.category-list {
+    margin-top: 10px;
+    margin-right: 50px;
+    text-align: right;
+}
+
+.category-list label {
+    display: block;
+    margin-bottom: -5px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.category-list label:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.category-list input[type="radio"] {
+    margin-left: 10px; /* Increased space between radio and text */
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    border: 1.5px solid #373737;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.category-list input[type="radio"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}

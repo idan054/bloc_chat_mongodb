@@ -1,0 +1,3 @@
+base_url=https://avners.co.il
+consumer_key=ck_40277bba2e0d959fb2ec3aed808e01db800f4c1f
+consumer_secret=cs_ffefd520797cef75c3a9c5cea3dd477c2fa585bf

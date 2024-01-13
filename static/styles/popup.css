@@ -1,0 +1,71 @@
+  /* Popup box style */
+  
+  .infoText {
+
+    display: none;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Close button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* .done-button {
+  background-color: #007bff; 
+  color: white; 
+  padding: 5px 10px; 
+  border: none; 
+  cursor: pointer; 
+}
+
+.done-button:hover {
+  background-color: #0065d1; 
+} */
+
+h1 {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #333; /* Text color */
+}
+
+h2 {
+  margin-bottom: 5px;
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #666; /* Text color */
+}

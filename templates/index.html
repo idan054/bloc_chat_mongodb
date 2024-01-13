@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>iMatch tool</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1870/1870111.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/popup.css') }}">
+    <script  src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
+
+
+</head>
+<body>
+
+{% include 'popup.html' %} 
+
+<script  src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
+
+
+<form onsubmit="handleSubmit(event)">
+    <h2 dir="ltr">Spider3D כלי אוטומטי
+        <!-- <i class="fas fa-cog" onclick="showWooSettings()" -->
+            <i id="settingsBtn" class="fas fa-cog" onclick="showWooPopupSettings()"
+            style="font-size: medium; cursor: pointer; margin-left: 5px;"></i>
+    </h2>
+
+    <input dir=rtl id="main_field" type="text" placeholder="הכנס מס' הזמנה" name="main_field" autocomplete="off"
+           oninput="checkInput()">
+    <br>
+    <button id='cat_button' type="button" onclick="handleFindCategory()">זיהוי סטטוס</button>
+    <button id='start_button' type="submit">הפעלה</button>
+</form>
+<br>
+
+<div id="categoryList" class="category-list" dir=rtl>
+    <p dir=rtl id="message"></p>
+</div>
+
+</body>
+</html>

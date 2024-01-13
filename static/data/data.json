@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "afekafinance-5bedd",
+  "private_key_id": "f83a0f983eed87dbe2e928e1a88d69a9c50a738c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCp/ROmCB9XBO6H\nJGCsDgbZv1iD4dCbQeUbHEpg/H8sUXRaxrM3FIhSsVosjwPltwde8RIj0OPCHBkw\nPXNh127fYR8LGga7zPdMhltdAyxmeE8dyNMYWtwmTzIZMDeof1/YciRnL7BjMAgy\nTs76tGojHJj5LrTnkyZpr2AiyzGfGnyNEPy0BhUEACM1V9nH5FP7kRug5aOTTwO5\nay5aik8fjCF5GZMzGfkzpMePNMLLxvI7c58s/MFeQDx6V8rlE/vgrsBPylei0f9S\n4hJrG9kxrZk+ppEQVqm6ZdFafdGKsGw+8yjpnfrTIRlvK+T672QKLYlRKYSuNzIc\npfnFkHfnAgMBAAECggEAEyqvc/mXewrZ0FAYPF4qhJPQKbKlAFSKPifO9SeTOU6H\n5ZJg87Vzd4t6xOptQJIGGTzqVDKB88mSR3+uSlptrG85fll1Z+iA+9ZsZ8zrTTSE\nizGxJ55bE1C7r95hcDTIfFHGbAITC+QHEJEVQmxkSUg4sWQETtYnLyRwnQu3MR6u\nyLfOP42SQt6QHU7VDAfQ7/wV9l1o6Bk4EMqXux4Yo9UCm7IdSJJKw/asu2a+83y/\nrs9IeAeZS2RXI/dZZg0iWUs8RF8BYOPOuc/Xjcgpq/mZgbyYCPToqKKCKzMwE3Ax\nfi1/wMfvQJ2OzsNUbApeE9qMPCFiAKgfhjf6evpZqQKBgQDeIyr6dz2WFZ9gmyEj\nuR1l60ept8Ap9VmfRH57erkdyGvhCA4Ig4e+x3QypfaXEMRSFduTEfW/gg9O6cXa\nemoNfcDvnbLYjWFxTCVwE4nNcbQDhpjgz7YhsFL9X0Du2hfCJwf0cnWhpom20evG\nkOzpAvvuXc0yC+Nj1euXbzfwrwKBgQDD5tIbaThVEPVh5hpKfl6MpvyFNYFx37VC\n2higULW2GQEpOR9S9HUq8gDaZ2GrH/SJeHIV3UFWC3U1rrFzyglyjgpKTxIMd/FW\nw/D8Sk/PA778TgXVD0dsdh8iJdZZB0ziNBWcfa50AQiNO3a2AJiWfjDSnfFAbWwI\nZYsoZaoKSQKBgD5/uIzl1a8PgFsG6okJgUr2qqAGsgtcG44jEE8flUva4vdac9BT\naXL03S2O4lVYg1PxEGlNqU3rgvEZ9u/kd0g6dHk2bmZdSOg+m13wMVpbPmGrkgHW\njxDlckQVc8iAFiUrJCLTvWLw31hPsb2Zcv6QN1+2hpApJh4lxvZBdYTDAoGBAKKL\noQYRdiZPHeuPK31oATefTqOQ08kSn6nKoOhUT5G6iZYUyYLhR17M0hxl70o4B4UR\nJUgy/4VPmH9kZeT3XINqi+tAVG94Dg26IviTCElyiEN80aYJOXArSoXg80uHnSmL\noero9ZlXSis1jbhSIkmshwIa/xRANoV5C9AHGuHRAoGBANmh7cvJKoiNDrjtjCCb\nTQ8gUH87RAriyZKpcURyeJHW8DtimqbKH5FAV6v+l3Mfk9vpSNfqvVXPGW8zlQ7h\nSGqlEhDJrI9eUMJeo6KjRWRkkfMQufH7SiYFNBBP/kNItIoCMMaDELH//uXJxHfr\n/ZGiGv/5U62rPIwqlgQM+PQ+\n-----END PRIVATE KEY-----\n",
+  "client_email": "imatch@afekafinance-5bedd.iam.gserviceaccount.com",
+  "client_id": "105045252453776105302",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/imatch%40afekafinance-5bedd.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
